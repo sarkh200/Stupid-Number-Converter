@@ -27,7 +27,7 @@
 	border-color: var(--border-color);
 	color: var(--foreground);
 	font-size: 20pt;
-	flex-grow: 5;
+	flex-grow: 1;
 }
 
 .optionSelect {
@@ -40,7 +40,7 @@
 #inputField {
 	display: flex;
 	flex-direction: row;
-	height: 10vh;
+	flex-wrap: wrap;
 }
 
 #output {
