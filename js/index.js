@@ -43,6 +43,9 @@ function normalBase(n, b) {
 
 function boogaNumerals(n) {
 	let digits = Array.from(String(n), Number);
+	if (digits == "") {
+		return "";
+	}
 	let output = "";
 	if (n == 0) {
 		return "booga"
