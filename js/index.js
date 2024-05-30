@@ -26,9 +26,17 @@ function calculate(input, output) {
 
 function normalBase(n, b) {
 	let digits = "";
+	let isNegative = false;
+	if (n < 0) {
+		n = Math.abs(n);
+		isNegative = true;
+	}
 	while (n > 0) {
 		digits = (n % b) + digits;
 		n = Math.floor(n / b);
+	}
+	if (isNegative) {
+		digits = "-" + digits;
 	}
 	return digits;
 }
