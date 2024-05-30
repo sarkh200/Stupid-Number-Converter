@@ -1,0 +1,54 @@
+:root {
+	--foreground: white;
+	--background: black;
+	--window-dressing: aqua;
+	--border-color: orange;
+}
+
+.foreground {
+	color: var(--foreground);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.background {
+	background-color: var(--background);
+}
+
+.decour {
+	border-color: var(--window-dressing);
+}
+
+* {
+	color: var(--foreground);
+}
+
+.numberInput {
+	background-color: var(--background);
+	border-color: var(--border-color);
+	color: var(--foreground);
+	font-size: 20pt;
+	flex-grow: 5;
+}
+
+.optionSelect {
+	background-color: var(--background);
+	border-color: var(--border-color);
+	flex-grow: 1;
+	font-size: 15pt;
+}
+
+#inputField {
+	display: flex;
+	flex-direction: row;
+	height: 10vh;
+}
+
+#output {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 20pt;
+	color: green;
+}
+
+#header {
+	font-size: 25pt;
+}
