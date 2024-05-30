@@ -15,9 +15,12 @@ function calculate(input, output) {
 			val = boogaNumerals(input);
 			break;
 		case "2":
-			val = baseBooga(input);
+			val = ogBoogaNumerals(input);
 			break;
 		case "3":
+			val = baseBooga(input);
+			break;
+		case "4":
 			val = ianBS(input);
 			break;
 	}
@@ -65,6 +68,39 @@ function boogaNumerals(n) {
 		if (digits[i] != 0) {
 			for (let j = 0; j < digits.length - (i + 1); j++) {
 				output += "booga ";
+			}
+		}
+	}
+	return output;
+}
+
+function ogBoogaNumerals(n) {
+	let output = "";
+	let number = String(n);
+	if (number[0] == "-") {
+		number = number.substring(1);
+		output += "booga ";
+	}
+	let digits = Array.from(number, Number);
+	if (digits == "") {
+		return "";
+	}
+	if (n == 0) {
+		return "booga"
+	}
+	if (digits[0] == null) {
+		output += "booga";
+	}
+
+	for (let i = 0; i < digits.length; i++) {
+		if (digits[i] != 0) {
+			for (let j = 0; j < digits[i]; j++) {
+				let digit = "";
+				for (let k = 0; k < digits.length - i; k++) {
+					digit = "ooga " + digit;
+					digit += "booga "
+				}
+				output += digit;
 			}
 		}
 	}
