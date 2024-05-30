@@ -42,10 +42,21 @@ function normalBase(n, b) {
 }
 
 function boogaNumerals(n) {
-	let digits = Array.from(String(n), Number);
 	let output = "";
+	let number = String(n);
+	if (number[0] == "-") {
+		number = number.substring(1);
+		output += "booga ";
+	}
+	let digits = Array.from(number, Number);
+	if (digits == "") {
+		return "";
+	}
 	if (n == 0) {
 		return "booga"
+	}
+	if (digits[0] == null) {
+		output += "booga";
 	}
 	for (let i = 0; i < digits.length; i++) {
 		for (let j = 0; j < digits[i]; j++) {
